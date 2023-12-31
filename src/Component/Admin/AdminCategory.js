@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import Admin_View_CategoryHook from '../../Hook/Admin/Admin_View_CategoryHook';
 import { deleteCategory, getCategory, getSearchCategory } from '../../redux/Actions/categoryAction';
 import { useDispatch } from 'react-redux';
+import { baseUrlImage } from '../../API/baseURLImage';
 
 const AdminCategory = () => {
     const [category, loading] = Admin_View_CategoryHook()
@@ -41,7 +42,7 @@ const AdminCategory = () => {
         },
         {
             name: "image",
-            selector: (row) => <img src={row.image} alt='' width={"60px"} height={"60px"} className='rounded object-fit-contain ' />
+            selector: (row) => <img src={baseUrlImage+ row.image.slice(9)} alt='' width={"60px"} height={"60px"} className='rounded object-fit-contain ' />
         },
         {
             name: "name",

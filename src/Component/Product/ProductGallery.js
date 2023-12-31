@@ -3,28 +3,26 @@ import './productStyles.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useParams } from 'react-router-dom'
 import Product_Details_Hook from '../../Hook/ProductDetailsHook/Product_Details_Hook'
+import { baseUrlImage } from '../../API/baseURLImage'
 const ProductGallery = () => {
     const { id } = useParams()
     const [item, dataImages, imageCover, brand, category, prod] = Product_Details_Hook(id)
 
-    const [updataMainImg, setUpdataMainImg] = useState(null)
+    const [updataMainImg, setUpdataMainImg] = useState("")
     const [imgData, setImgData] = useState([])
-
     useEffect(() => {
-        const imgFunction = async () => {
-            await setImgData(dataImages)
+        if (dataImages) {
+            setImgData(dataImages)
+          
         }
-        imgFunction();
     }, [dataImages]);
-
     useEffect(() => {
-        setUpdataMainImg(imageCover)
+        if (imageCover) {
+            setUpdataMainImg(imageCover)
+        }
     }, [imageCover]);
 
-    // hendel change img
-    const handelChangImg = async (i) => {
-        await setUpdataMainImg(dataImages[i])
-    }
+  
 
     return (
 
@@ -34,8 +32,10 @@ const ProductGallery = () => {
                 <ul className='d-flex flex-column mx-1 justify-content-center p-0 gap-1'>
                     {imgData ? imgData.map((img, index) => {
                         return (
-                            <li key={index}>
-                                <LazyLoadImage effect='blur' src={img} key={index} onMouseMove={() => handelChangImg(index)} alt={item.title}
+                            <li onClick={
+                                () => setUpdataMainImg(img)
+                            } key={index}>
+                                <LazyLoadImage effect='blur' src={baseUrlImage+ img.slice(9)} key={index}  alt={item.title}
                                     style={{ width: "100px", height: "100px" }}
                                     className={updataMainImg === img ? "active object-fit-contain img-size" : "img-size object-fit-contain"} />
                             </li>
@@ -45,7 +45,7 @@ const ProductGallery = () => {
                 {/*  */}
             </div>
             <div className='main-imgBox overflow-hidden p-1 text-center  '>
-                <LazyLoadImage effect='blur' src={updataMainImg || ""} alt={item.title} style={{ width: "100%", height: "400px" }}
+                <LazyLoadImage effect='blur' src={baseUrlImage+updataMainImg.slice(9)} alt={item.title} style={{ width: "100%", height: "400px" }}
                     className='object-fit-contain   img-fluid ' />
             </div>
             {/*  */}
@@ -53,8 +53,10 @@ const ProductGallery = () => {
                 <ul className='d-flex  mt-2 justify-content-center p-0 gap-1'>
                     {imgData ? imgData.map((img, index) => {
                         return (
-                            <li key={index}>
-                                <LazyLoadImage effect='blur' src={img} key={index} onMouseMove={() => handelChangImg(index)} alt={item.title}
+                            <li
+                                onClick={() => setUpdataMainImg(img)} 
+                            key={index}>
+                                <LazyLoadImage effect='blur' src={baseUrlImage+img.slice(9)} key={index}  alt={item.title}
                                     style={{ width: "100px", height: "100px" }}
                                     className={updataMainImg === img ? "active object-fit-contain img-size" : "img-size object-fit-contain"} />
                             </li>

@@ -1,2 +1,3 @@
-export const baseUrlImage = "https://weak-rose-bandicoot-tie.cyclic.cloud/products/"
-// export const baseUrlImage = "http://127.0.0.1:8000/products/"
+export const baseUrlImage = "https://salaa-kxfx.onrender.com"
+export const baseUrlImageCart = "https://salaa-kxfx.onrender.com/"
+

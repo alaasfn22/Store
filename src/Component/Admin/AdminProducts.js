@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { deleteProduct, getSearchProduct } from '../../redux/Actions/productAction';
 import Admin_View_products_Hook from '../../Hook/Admin/Admin_View_products_Hook';
+import { baseUrlImage } from '../../API/baseURLImage';
 
 const AdminProducts = () => {
     const [items, loading] = Admin_View_products_Hook()
@@ -39,7 +40,7 @@ const AdminProducts = () => {
         },
         {
             name: "image",
-            selector: (row) => <img src={row.imageCover} alt='' width={"60px"} height={"60px"} className='rounded object-fit-contain ' />
+            selector: (row) => <img src={baseUrlImage+ row.imageCover.slice(9)} alt='' width={"60px"} height={"60px"} className='rounded object-fit-contain ' />
         },
         {
             name: "name",

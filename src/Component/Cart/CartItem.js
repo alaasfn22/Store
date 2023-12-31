@@ -4,7 +4,7 @@ import { Button, Row, Table } from 'react-bootstrap'
 import img1 from '../../assets/image/3.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { baseUrlImage } from '../../API/baseURLImage';
+import { baseUrlImage, baseUrlImageCart } from '../../API/baseURLImage';
 import Delete_Item_Cart_Hook from '../../Hook/Cart/Delete_Item_Cart_Hook';
 import { ToastContainer } from 'react-toastify';
 import UpDateCountCartHook from '../../Hook/Cart/upDateCountCartHook';
@@ -13,20 +13,7 @@ import { useEffect } from 'react';
 const CartItem = ({ cartProducts }) => {
     const [clearAll, removeofCart] = Delete_Item_Cart_Hook()
     const [counter, handelChangecont] = UpDateCountCartHook(cartProducts)
-    // const [s, setS] = useState([])\
-    // let s = []
-    // cartProducts ? s = cartProducts : s = [];
-    //     const [counter, setCounter] = useState("0")
-
-    // const handelChangecont = (e) => {
-    //     setCounter(e.target.value)
-    // }
-    // useEffect(() => {
-    //     if (s !== null) {
-    //         setCounter((prev) => s.map((dd) => prev = dd.count))
-    //     }
-    // }, [s]);
-    // console.log(counter)
+    
 
 
     return (
@@ -55,7 +42,7 @@ const CartItem = ({ cartProducts }) => {
                                             <FontAwesomeIcon onClick={() => removeofCart(items._id)} icon={faXmark} className='close-icon' />
                                         </td>
                                         <td >
-                                            <img src={`${baseUrlImage}${items.product.imageCover || img1}`} alt=''
+                                            <img src={`${baseUrlImageCart}${items.product.imageCover.slice(9) || img1}`} alt=''
                                                 width={"80px"} height={"100px"} className='rounded object-fit-contain ' />
                                         </td>
                                         <td>{items.product.title}</td>
