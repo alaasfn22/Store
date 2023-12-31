@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { getProduct, getProductPagination, getSearchProduct } from '../../redux/Actions/productAction';
+import {  getProductPagination, getSearchProduct } from '../../redux/Actions/productAction';
 import { useState } from 'react';
 
 const ProductSearchHook = () => {
