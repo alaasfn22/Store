@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Almarai", sans-serif;
+}
+
+/* start globel */
+.text-form {
+    color: var(--black2);
+}
+
+/* navbar */
+.admin-NavBar {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+/* end navbar */
+/* start sidebar */
+.admin-sidebar {
+    min-height: 100vh !important;
+    position: sticky;
+    top: 0;
+    background-color: var(--main-color) !important;
+}
+
+.admin-sidebar .header {
+    color: var(--white-color);
+}
+
+.admin-sidebar .side-title-box {
+    cursor: pointer;
+    transition: var(--transition1);
+    color: var(--white-color);
+    position: relative;
+}
+
+
+.admin-sidebar .side-title-box:hover,
+.admin-sidebar .active {
+    background-color: var(--white-color);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-left: 5px;
+    color: #333;
+}
+
+
+.admin-sidebar .side-icon {
+    font-size: var(--p-20);
+}
+
+.admin-sidebar .side-title {
+    font-size: var(--p-18);
+    font-weight: var(--fw-400);
+}
+
+@media (max-width:991px) {
+    .admin-sidebar .side-title {
+        display: none;
+    }
+
+    .admin-sidebar .side-icon,
+    .side-icon {
+        margin: auto;
+    }
+
+    .admin-sidebar .header {
+        display: none;
+    }
+
+
+
+    .side-title-box {
+        text-align: center;
+    }
+
+}
+
+/* end sidebar */
+/* start admin-home-content */
+.admin-home-content .details-card .number {
+    color: var(--main-color);
+    font-size: var(--p-24);
+    font-weight: var(--fw-600);
+}
+
+.admin-home-content .details-card .title,
+.admin-sidebar .header {
+    font-size: var(--p-20);
+    font-weight: var(--fw-400);
+}
+
+.admin-home-content .icons {
+    font-size: var(--p-24);
+}
+
+.admin-home-content .details-card {
+    transition: var(--transition1);
+    color: var(--black2);
+    background-color: var(--white-color) !important;
+}
+
+.admin-home-content .details-card:hover {
+    background-color: var(--main-color) !important;
+    color: var(--white-color) !important;
+}
+
+.admin-home-content .details-card:hover .number {
+    transition: var(--transition1);
+    color: var(--white-color) !important;
+}
+
+.rdt_TableCol {
+    background-color: var(--main-color) !important;
+    text-align: center;
+    color: var(--white-color);
+    font-size: var(--p-18);
+}
+
+.rdt_TableRow {
+    font-size: var(--p-18) !important;
+    padding: 7px 15px;
+
+}
+
+.bFyntL {
+    justify-content: center !important;
+}
+
+.celVQH {
+    padding: 0px !important;
+}
+
+.btn-remove {
+    background-color: rgb(224, 69, 69) !important;
+    border: none !important;
+}
+
+/* multi image input style */
+.lmMaya {
+    border: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+}

@@ -1,0 +1,20 @@
+.footer-social {
+    background-color: var(--main-color) !important;
+
+}
+
+.footer ul li p,
+p,
+.footer-des {
+    color: var(--icon-color);
+}
+
+.footer-des {
+    font-size: var(--p-16);
+}
+
+.footer-title {
+    font-size: var(--p-20);
+    color: #333;
+    font-weight: var(--fw-500);
+}

@@ -1,0 +1,13 @@
+@media (max-width:767px) {
+    .sideBare-filter {
+        box-shadow: none !important;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--main-background) !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}

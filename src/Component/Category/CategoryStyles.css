@@ -1,0 +1,27 @@
+.cat-content {
+    border: 1px solid #eee;
+    height: 100px;
+    background-color: var(--white-color);
+}
+
+.cat-card {
+    background-color: var(--white-color);
+    min-height: 5rem;
+    overflow: hidden;
+
+}
+
+.cat-card .cat-name {
+    font-size: var(--p-16);
+    font-weight: var(--fw-400);
+}
+
+.cat-header .cat-header-name {
+    font-size: var(--p-18);
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.cat-header .cat-header-name:hover {
+    opacity: 0.7;
+}

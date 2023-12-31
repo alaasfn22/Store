@@ -1,0 +1,48 @@
+.landing-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.landing-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+.landing-box:hover img {
+    transform: scale(1.1);
+    transition: var(--transition1);
+}
+
+.landing-overlay h3 {
+    font-size: var(--h3-30);
+    font-weight: var(--fw-600);
+    color: var(--white-color);
+}
+
+.landing-overlay p {
+    color: var(--white-color);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: var(--main-color) !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--main-color) !important;
+}
+
+.slick-dots {
+    margin-bottom: -8px !important;
+}
+
+.banner-box {
+    background-color: var(--icon-color);
+    color: var(--white-color);
+
+}

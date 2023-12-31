@@ -1,0 +1,41 @@
+.home-button-top {
+    position: fixed;
+    z-index: 10;
+    top: 82vh;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--white-color);
+    background-color: var(--main-color);
+    transition: var(--transition1);
+    backdrop-filter: blur(10px);
+    display: none;
+    animation: move 0.5s infinite alternate;
+}
+
+.home-button-top:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+    transition: var(--transition1);
+    cursor: pointer;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width:768px) {
+    .home-button-top {
+        top: 86vh;
+        right: 15px;
+    }
+}

@@ -1,0 +1,39 @@
+.res-table {
+    overflow-x: auto;
+}
+
+.table {
+    min-width: 100%;
+}
+
+.cart-content td {
+    line-height: 5;
+    border: none;
+}
+
+.cart-content th {
+    border: none;
+}
+
+.cart-content .close-icon {
+    cursor: pointer;
+    font-size: var(--p-18);
+}
+
+.cart-content .close-icon:hover {
+    color: red;
+    transition: var(--transition1);
+}
+
+.check-btn {
+    background-color: var(--main-color) !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px !important;
+    opacity: 0.9;
+}
+
+.check-btn:hover {
+    opacity: 1;
+    transition: var(--transition1);
+}

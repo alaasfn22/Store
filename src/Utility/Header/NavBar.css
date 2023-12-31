@@ -1,0 +1,125 @@
+.navbar {
+    background-color: var(--white-color) !important;
+    box-shadow: 0px 0px 1px rgb(106, 105, 105);
+}
+
+.logo-icon {
+    color: var(--main-color);
+}
+
+.logo-text {
+    color: var(--main-color);
+    font-weight: var(--fw-500);
+    font-size: var(--h3-24);
+}
+
+.inpout-content {
+    border-radius: 20px;
+    padding: 0 !important;
+    width: 400px;
+    height: 30px;
+    border: 1px solid var(--icon-color);
+}
+
+.inpout-content .custom-input {
+    border: none !important;
+    border-radius: 20px;
+    outline: none !important;
+    padding: 0px 8px;
+}
+
+.inpout-content .custom-btn {
+    background-color: var(--main-color) !important;
+    border-radius: 20px;
+    color: var(--white-color);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.inpout-content .custom-btn:focus {
+    color: var(--white-color);
+    box-shadow: none;
+    border: none !important;
+    outline: none !important;
+}
+
+.inpout-content .custom-btn:hover {
+    opacity: 0.7;
+    transition: var(--transition1);
+}
+
+.navbar .icon-box:hover .nav-icon,
+.navbar .icon-box:hover .icon-name {
+    opacity: 0.7;
+    transition: var(--transition1);
+}
+
+.navbar .icon-content .icon-box {
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar .icon-content .nav-icon {
+    color: var(--icon-color);
+    margin-bottom: 3px;
+}
+
+.navbar .icon-content .icon-name {
+    color: var(--icon-color);
+    font-size: var(--p-14);
+    font-weight: var(--fw-400);
+}
+
+.navbar .icon-box .order-count {
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    color: var(--white-color);
+    font-size: var(--p-12);
+    text-align: center;
+    padding: 2px;
+    font-weight: var(--fw-500);
+    position: absolute;
+    top: -6px;
+    right: -5px;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-menu {
+    margin-top: 23px !important;
+    position: absolute !important;
+    left: -50% !important;
+    padding: 10px !important;
+}
+
+@media (max-width:767px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .inpout-content {
+        width: 100%;
+    }
+}
+
+.navbar-toggler {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 0;
+}
+
+.header-component {
+    transition: var(--transition-1);
+    z-index: 10;
+}
