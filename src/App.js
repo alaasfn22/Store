@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
 
-      <HashRouter>
+  
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -52,7 +52,6 @@ function App() {
           <Route path='*' element={<p className='mt-5 pt-5'> page not found </p>} />
         </Routes>
         <Footer />
-      </HashRouter>
 
 
     </div>

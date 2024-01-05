@@ -43,7 +43,7 @@ const NavBar = () => {
         <div>
             <Navbar expand="md" className=" navbar p-3">
                 <Container >
-                    <Navbar.Brand href="#/"><div className='d-flex align-items-center justify-content-center'>
+                    <Navbar.Brand href="/"><div className='d-flex align-items-center justify-content-center'>
                         <FontAwesomeIcon icon={faBasketShopping} className='logo-icon mb-1 fs-4  ' />
                         <h3 className='ms-2 my-0 logo-text'>Basket</h3>
                     </div></Navbar.Brand>
