@@ -1,7 +1,7 @@
 import Home from './Page/HomePage/Home';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProductDetailsHome from './Page/ProductDetailsPage/ProductDetailsHome';
 import SearchProductsPage from './Page/ProductSearchPage/SearchProductsPage';
 import LoginPage from './Page/Auth/LoginPage';
@@ -22,15 +22,13 @@ import ResetPassword from './Page/Auth/ResetPassword';
 import NavBar from './Utility/Header/NavBar';
 import Footer from './Utility/Footer/Footer';
 function App() {
-  const HeaderDisplay = (window.location.pathname === '/' || window.location.pathname === '/allcategory'
-    || window.location.pathname === '/productdetails/:id' || window.location.pathname === '/allproducts'
-    || window.location.pathname === '/allbrand' || window.location.pathname === '/cart') ? <NavBar /> : null
   return (
     <div className="App">
 
   
         <NavBar />
-        <Routes>
+       <BrowserRouter>
+       <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/allcategory' element={<CategoryPage />} />
           <Route path='/productdetails/:id' element={<ProductDetailsHome />} />
@@ -51,6 +49,7 @@ function App() {
           <Route path="/admin/addproduct" element={<AdminAddProductPage />} />
           <Route path='*' element={<p className='mt-5 pt-5'> page not found </p>} />
         </Routes>
+        </BrowserRouter>
         <Footer />
 
 
